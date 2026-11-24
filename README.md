@@ -5,9 +5,19 @@
 2. Work distribution:
 ----SAM----
 -readinv
--readinvHelpers
-    -parseline()
-    
+
+By Thursday
+-open the .bin and read the header.
+-helper file that contains helper functions
+	-error checking file (bytes written to correct places)
+	-check the header [invp,version,flag,record count]
+
+By Saturday
+  -read records into dynamic array with realloc
+  -helper function for record parsing
+  	-timemstamp, event, byte, qty, sku, note
+By Sunday
+	-build and format report
 
 
 ----Ben----
@@ -53,3 +63,4 @@ To Work on after Demo (Expected completion Date is Saturday, Dec 5)
 
 - write LL to binary
 - impliment run length marker (-c)
+- 
