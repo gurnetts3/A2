@@ -9,5 +9,8 @@
 
 #include "sharedInv.h"
 
+int checkHeader(char * line);
+
+int checkDayTime(char * line);
 
 #endif 

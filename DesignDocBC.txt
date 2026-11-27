@@ -1,0 +1,42 @@
+Assignment 2
+Name: Ben C
+ID: 3172656
+Lab/Lecture Instructor: Hanan S.
+
+
+Deliverables for packInv set 1:
+
+- fgets reader for lines
+- tokenize fields
+- check formats of fields
+- error checks
+
+additional prerequisites for Deliverables:
+- check filetype in main to enter packInv
+
+Plan:
+
+- open file with wb
+- get each line with fgets
+- tokenize with "| " delimiters, get datetime, event, item, qty, and note
+- header will be tokenized and checked first to ensure it is present before th remaining lines
+- send each token to helper function to verify format of element passing an int parameter that
+  is shared, and incriments by 1 if any fail. Once checks are done if it is greater than 0 
+  then the line is skipped and the next line is checked.
+    - sscanf to verify the format for the clock
+    - strcmp for event
+    - strlen < 64 for SKU
+    - -129 < qty < 128
+    - note checks strcmp for single hyphen and then if the field is empty
+- Once all tokens pass they are then passed as parameters to helper functions to assign them to
+  variables
+- first test will be to print each line processed
+
+Issues List:
+
+1. after first compile iterating the entry into packInventory from main and checking the header, 
+   ran into a segmentation fault
+    - didn't pass the file in command line, and didnt have checks for argc
+2. entered packInventory, but could not print any lines from file, and file would wipe all content from the log file
+    - changed fopen to "r" for the time being. I'm thinking that "wb" will need to be declared later and wrote to while 
+      reading from file. will test at later implimentation.
