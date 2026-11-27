@@ -13,4 +13,12 @@ int checkHeader(char * line);
 
 int checkDayTime(char * line);
 
+int checkEvent(char * line);
+
+int checkSKU(char * line);
+
+int checkQuantity(char * line);
+
+int checkNote(char * line);
+
 #endif 

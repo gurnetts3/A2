@@ -40,3 +40,6 @@ Issues List:
 2. entered packInventory, but could not print any lines from file, and file would wipe all content from the log file
     - changed fopen to "r" for the time being. I'm thinking that "wb" will need to be declared later and wrote to while 
       reading from file. will test at later implimentation.
+3. tm struct was not reading as being initialized
+    - moved tm initialization from if block
+4.

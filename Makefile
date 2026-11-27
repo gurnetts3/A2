@@ -16,4 +16,4 @@ readInv.o: readInv.c readInv.h sharedInv.h
 PHONY: Clean
 
 Clean:
-	rm *.o a.out
+	rm -f *.o a.out
